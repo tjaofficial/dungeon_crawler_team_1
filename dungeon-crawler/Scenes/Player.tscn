@@ -1,13 +1,13 @@
-[gd_scene load_steps=21 format=3 uid="uid://belg7kpcwtq1r"]
+[gd_scene load_steps=15 format=3 uid="uid://belg7kpcwtq1r"]
 
 [ext_resource type="Script" path="res://Scripts/BodyStateMachine.gd" id="1_tngym"]
-[ext_resource type="Script" path="res://Scenes/PlayerController.gd" id="1_v2sry"]
-[ext_resource type="Texture2D" uid="uid://twkvvicsotwr" path="res://Art/Knight-Weapon-Idle-ALLDirections.png" id="2_8ysww"]
+[ext_resource type="Script" path="res://Scripts/PlayerController.gd" id="1_v2sry"]
+[ext_resource type="SpriteFrames" uid="uid://5owe7pryj4o7" path="res://Art/AnimationSets/PlayerWeapon.tres" id="2_4yy1r"]
 [ext_resource type="Script" path="res://Scripts/ArmsStateMachine.gd" id="2_b5lkm"]
 [ext_resource type="Script" path="res://Scripts/IdleBodyState.gd" id="2_ccwph"]
 [ext_resource type="Script" path="res://Scripts/WalkBodyState.gd" id="3_huxg5"]
-[ext_resource type="Texture2D" uid="uid://bf22kwdswlndi" path="res://Art/Knight-Arms-Idle-ALLDirections.png" id="3_kfe2a"]
-[ext_resource type="Texture2D" uid="uid://ce8tytoae76ri" path="res://Art/Knight-Body-Idle-N.png" id="4_aik2r"]
+[ext_resource type="SpriteFrames" uid="uid://bjnxpy0xh8uy8" path="res://Art/AnimationSets/PlayerArms.tres" id="3_ppcyc"]
+[ext_resource type="SpriteFrames" uid="uid://cuuupmnd50bs7" path="res://Art/AnimationSets/PlayerLegs.tres" id="4_q3261"]
 [ext_resource type="Script" path="res://Scripts/ChangeRoomBodyState.gd" id="4_ueign"]
 [ext_resource type="Script" path="res://Scripts/IdleArmsState.gd" id="6_es8g8"]
 [ext_resource type="Script" path="res://Scripts/WalkArmsState.gd" id="7_lmbwc"]
@@ -16,51 +16,6 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vc3rh"]
 size = Vector2(10, 9)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_x6jo6"]
-atlas = ExtResource("2_8ysww")
-region = Rect2(144, 0, 36, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_fqo3y"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_x6jo6")
-}],
-"loop": true,
-"name": &"Knight-Weapon-Idle-N",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_j8exj"]
-atlas = ExtResource("3_kfe2a")
-region = Rect2(144, 0, 36, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_ml1we"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j8exj")
-}],
-"loop": true,
-"name": &"Knight-Arms-Idle-N",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_tk7id"]
-atlas = ExtResource("4_aik2r")
-region = Rect2(0, 0, 36, 44)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_x7mf0"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_tk7id")
-}],
-"loop": true,
-"name": &"Knight-Body-Idle-N",
-"speed": 5.0
-}]
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_v2sry")
@@ -72,19 +27,21 @@ shape = SubResource("RectangleShape2D_vc3rh")
 [node name="Skeleton" type="Node" parent="."]
 
 [node name="PlayerWeapon" type="AnimatedSprite2D" parent="Skeleton"]
+z_index = 2
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_fqo3y")
-animation = &"Knight-Weapon-Idle-N"
+sprite_frames = ExtResource("2_4yy1r")
+animation = &"Knight-Weapon-Attack-S"
 
 [node name="PlayerArms" type="AnimatedSprite2D" parent="Skeleton"]
+z_index = 1
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_ml1we")
-animation = &"Knight-Arms-Idle-N"
+sprite_frames = ExtResource("3_ppcyc")
+animation = &"Knight-Arms-Attack-E"
 
 [node name="PlayerLegs" type="AnimatedSprite2D" parent="Skeleton"]
 texture_filter = 1
-sprite_frames = SubResource("SpriteFrames_x7mf0")
-animation = &"Knight-Body-Idle-N"
+sprite_frames = ExtResource("4_q3261")
+animation = &"Knight-Body-Idle-E"
 
 [node name="BodyStateMachine" type="Node" parent="."]
 script = ExtResource("1_tngym")

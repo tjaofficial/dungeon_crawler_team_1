@@ -19,8 +19,7 @@ func Enter():
 
 func Physics_update(_delta):
 	# checks if direction has changed, updates animation if it has
-	if player.cardinalDirection != lastPlayerDirection:
-		body_animation_changed.emit("Walk")
+	arms_animation_changed.emit("Walk")
 	#
 	# 
 	# HERE IS WHERE ALL LOGIC PERTAINING TO IDLE STATE GOES
@@ -28,13 +27,10 @@ func Physics_update(_delta):
 	#
 	pass
 
-# This is where logic for switching states goes
-# should be formatted as if/elif conditionals reading variables from player controller
-# NOTE: should have conditionals for all states that can be transitioned to from this state other than itself
-#  example below:
-		# if player.direction == 0:
-		# 	transitioned.emit("IdleArmsState")
-		# elif player.hasTouchedDoor:
-		# 	transitioned.emit("ChangeRoomArmsState")
-		# elif player.isAttacking:
-		# 	transitioned.emit("AttackArmsState")
+
+	if player.isTouchingDoor:
+		pass # room change emit here
+	elif Input.is_action_just_pressed("left_click"):
+		transitioned.emit("AttackArmsState")
+	elif player.inputDirectionVector.length() == 0:
+		transitioned.emit("IdleArmsState")

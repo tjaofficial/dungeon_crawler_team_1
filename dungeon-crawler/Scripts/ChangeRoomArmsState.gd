@@ -9,9 +9,7 @@ func Enter():
 	# calls which animation that needs to be played
 	# this signal is connected in the player controller script
 	# the player controller reads this signal and a match statement plays the associated animation
-	arms_animation_changed.emit("ChangeRoomArmsState")
-	# prints state entry to output panel
-	print("Entered Change Room Arms")
+	pass
 
 
 func Physics_update(_delta):
