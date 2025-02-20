@@ -14,23 +14,27 @@
 [ext_resource type="Script" path="res://Scripts/AttackArmsState.gd" id="8_qet0t"]
 [ext_resource type="Script" path="res://Scripts/ChangeRoomArmsState.gd" id="9_s4cxm"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_vc3rh"]
-size = Vector2(10, 9)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dkt4g"]
+size = Vector2(12, 8)
 
 [node name="Player" type="CharacterBody2D"]
 script = ExtResource("1_v2sry")
 
-[node name="CollisionShape2D (add shape)" type="CollisionShape2D" parent="."]
-position = Vector2(0, 6.5)
-shape = SubResource("RectangleShape2D_vc3rh")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 8)
+shape = SubResource("RectangleShape2D_dkt4g")
 
-[node name="Skeleton" type="Node" parent="."]
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+process_callback = 0
+
+[node name="Skeleton" type="Node2D" parent="."]
 
 [node name="PlayerWeapon" type="AnimatedSprite2D" parent="Skeleton"]
 z_index = 2
 texture_filter = 1
 sprite_frames = ExtResource("2_4yy1r")
-animation = &"Knight-Weapon-Attack-S"
+animation = &"Knight-Weapon-Walk-SW"
 
 [node name="PlayerArms" type="AnimatedSprite2D" parent="Skeleton"]
 z_index = 1
@@ -76,7 +80,3 @@ player = NodePath("../..")
 [node name="ChangeRoomArmsState" type="Node" parent="ArmsStateMachine" node_paths=PackedStringArray("player")]
 script = ExtResource("9_s4cxm")
 player = NodePath("../..")
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(4, 4)
-process_callback = 0

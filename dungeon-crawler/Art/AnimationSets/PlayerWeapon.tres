@@ -1,10 +1,9 @@
-[gd_resource type="SpriteFrames" load_steps=154 format=3 uid="uid://5owe7pryj4o7"]
+[gd_resource type="SpriteFrames" load_steps=153 format=3 uid="uid://5owe7pryj4o7"]
 
 [ext_resource type="Texture2D" uid="uid://c1h1w14q3ve7l" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-E.png" id="1_kbbxi"]
 [ext_resource type="Texture2D" uid="uid://bj7pqgculhnnd" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-N.png" id="2_ldsto"]
 [ext_resource type="Texture2D" uid="uid://ccocn0og0jshk" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-NE.png" id="3_raxg6"]
 [ext_resource type="Texture2D" uid="uid://cc8qokkrtcfd7" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-NW.png" id="4_ug4lw"]
-[ext_resource type="Texture2D" uid="uid://c4d4jwew6vubr" path="res://Art/KnightSpriteSheets/Knigh-Weapon-Attack-S.png" id="5_sjmf3"]
 [ext_resource type="Texture2D" uid="uid://bml5ngdqlfncu" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-SE.png" id="6_3adhj"]
 [ext_resource type="Texture2D" uid="uid://c0xrp505psr1f" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-SW.png" id="7_yj6dp"]
 [ext_resource type="Texture2D" uid="uid://dmmc4enegbwi8" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-W.png" id="8_ebu51"]
@@ -15,7 +14,7 @@
 [ext_resource type="Texture2D" uid="uid://ljhgv1my5eik" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-NW.png" id="13_lsl0q"]
 [ext_resource type="Texture2D" uid="uid://bamuiq187ueka" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-S.png" id="14_fah1c"]
 [ext_resource type="Texture2D" uid="uid://dtgyrdxqyp8x1" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-SE.png" id="15_5yk7l"]
-[ext_resource type="Texture2D" uid="uid://77eupdf7t3xh" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-SW.png" id="16_xlhwg"]
+[ext_resource type="Texture2D" uid="uid://c08ie2ily60eg" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-SW.png" id="16_xlhwg"]
 [ext_resource type="Texture2D" uid="uid://ccp4qxp88ave3" path="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-W.png" id="17_bjq07"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3jlpp"]
@@ -147,35 +146,27 @@ atlas = ExtResource("4_ug4lw")
 region = Rect2(252, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_de2d1"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(0, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_lp1t4"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(36, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_echc5"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(72, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqcnc"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(108, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bopkl"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(144, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ealtd"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(180, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pbdbb"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(216, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xp6i0"]
-atlas = ExtResource("5_sjmf3")
 region = Rect2(252, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1m8s"]
@@ -498,35 +489,35 @@ region = Rect2(216, 0, 36, 44)
 atlas = ExtResource("15_5yk7l")
 region = Rect2(252, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h5lja"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ufotv"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(0, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jeevv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0nga"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(36, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_rwa3n"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_g5lwj"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(72, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_hvvsw"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ckb1v"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(108, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_iio6s"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_clmo8"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(144, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_v5ef6"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mwpf0"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(180, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5l3om"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_h0by3"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(216, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_fj1nd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_7vwah"]
 atlas = ExtResource("16_xlhwg")
 region = Rect2(252, 0, 36, 44)
 
@@ -1039,28 +1030,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h5lja")
+"texture": SubResource("AtlasTexture_ufotv")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jeevv")
+"texture": SubResource("AtlasTexture_d0nga")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_rwa3n")
+"texture": SubResource("AtlasTexture_g5lwj")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_hvvsw")
+"texture": SubResource("AtlasTexture_ckb1v")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_iio6s")
+"texture": SubResource("AtlasTexture_clmo8")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_v5ef6")
+"texture": SubResource("AtlasTexture_mwpf0")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5l3om")
+"texture": SubResource("AtlasTexture_h0by3")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fj1nd")
+"texture": SubResource("AtlasTexture_7vwah")
 }],
 "loop": false,
 "name": &"Knight-Weapon-Walk-SW",

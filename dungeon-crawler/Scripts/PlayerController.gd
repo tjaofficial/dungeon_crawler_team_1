@@ -36,7 +36,10 @@ func _ready() -> void:
 	
 
 func _process(_delta: float) -> void:
-	# Get player direction Vector2
+	pass
+	# pushes player velocity in walk state to movement
+func _physics_process(delta: float) -> void:
+		# Get player direction Vector2
 	inputDirectionVector.x = Input.get_action_strength("move_right") - Input.get_action_strength("move_left")
 	inputDirectionVector.y = Input.get_action_strength("move_down") - Input.get_action_strength("move_up")
 	
@@ -44,9 +47,6 @@ func _process(_delta: float) -> void:
 	if inputDirectionVector != lastDirection:
 		cardinalDirection = get_cardinal_dir_from_vector2(inputDirectionVector)
 		lastDirection = inputDirectionVector
-	
-	# pushes player velocity in walk state to movement
-	move_and_slide()
 
 # matches inputDirectionVector to a cardinal direction
 func get_cardinal_dir_from_vector2(direction: Vector2) -> String:

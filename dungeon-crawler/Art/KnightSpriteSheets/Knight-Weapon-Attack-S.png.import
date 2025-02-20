@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c08ie2ily60eg"
-path="res://.godot/imported/Knight-Weapon-Walk-SW.png-e289f780e5eef3d942fcb9de323d810c.ctex"
+uid="uid://c4d4jwew6vubr"
+path="res://.godot/imported/Knight-Weapon-Attack-S.png-616016584c22dcb90402a02a92983d30.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/KnightSpriteSheets/Knight-Weapon-Walk-SW.png"
-dest_files=["res://.godot/imported/Knight-Weapon-Walk-SW.png-e289f780e5eef3d942fcb9de323d810c.ctex"]
+source_file="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-S.png"
+dest_files=["res://.godot/imported/Knight-Weapon-Attack-S.png-616016584c22dcb90402a02a92983d30.ctex"]
 
 [params]
 

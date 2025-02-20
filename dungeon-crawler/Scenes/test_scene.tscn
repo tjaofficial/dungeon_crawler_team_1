@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dryokho12jv1w"]
+
+[ext_resource type="Texture2D" uid="uid://da4ut2an3vi8e" path="res://Art/DungeonRoomTester.png" id="1_7odrl"]
+[ext_resource type="PackedScene" uid="uid://belg7kpcwtq1r" path="res://Scenes/Player.tscn" id="2_lxyo5"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapf"]
+size = Vector2(16, 144)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2yr18"]
+size = Vector2(224, 16)
+
+[node name="Test Scene" type="Node2D"]
+
+[node name="DungeonRoomBackground" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_7odrl")
+
+[node name="DungeonWalls" type="StaticBody2D" parent="."]
+
+[node name="EastWall" type="CollisionShape2D" parent="DungeonWalls"]
+position = Vector2(120, 0)
+shape = SubResource("RectangleShape2D_bmapf")
+
+[node name="SouthWall" type="CollisionShape2D" parent="DungeonWalls"]
+position = Vector2(0, 64)
+shape = SubResource("RectangleShape2D_2yr18")
+
+[node name="WestWall" type="CollisionShape2D" parent="DungeonWalls"]
+position = Vector2(-120, 0)
+shape = SubResource("RectangleShape2D_bmapf")
+
+[node name="NorthWall" type="CollisionPolygon2D" parent="DungeonWalls"]
+position = Vector2(0, -40)
+polygon = PackedVector2Array(-112, 0, -112, -32, 112, -32, 112, 0, 13, 0, 13, -5, -14, -5, -14, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_lxyo5")]

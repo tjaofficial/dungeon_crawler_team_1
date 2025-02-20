@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c4d4jwew6vubr"
-path="res://.godot/imported/Knigh-Weapon-Attack-S.png-29a4f3ca6b102f0c3ce04ca779876816.ctex"
+uid="uid://da4ut2an3vi8e"
+path="res://.godot/imported/DungeonRoomTester.png-7ad6108d524255f8d92f22776db19515.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/KnightSpriteSheets/Knigh-Weapon-Attack-S.png"
-dest_files=["res://.godot/imported/Knigh-Weapon-Attack-S.png-29a4f3ca6b102f0c3ce04ca779876816.ctex"]
+source_file="res://Art/DungeonRoomTester.png"
+dest_files=["res://.godot/imported/DungeonRoomTester.png-7ad6108d524255f8d92f22776db19515.ctex"]
 
 [params]
 

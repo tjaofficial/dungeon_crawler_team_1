@@ -20,7 +20,8 @@ func Physics_update(_delta):
 	body_animation_changed.emit("Walk") # NOTE this is constantly emitting to update animation direction, could work better
 
 
-	player.velocity = -player.inputDirectionVector.normalized() * player.moveSpeed
+	player.velocity = player.inputDirectionVector.normalized() * player.moveSpeed
+	player.move_and_slide()
 
 	if player.isTouchingDoor:
 		pass # room change emit here
