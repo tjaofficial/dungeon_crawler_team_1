@@ -13,7 +13,7 @@ config_version=5
 config/name="Dungeon Crawler"
 run/main_scene="res://Scenes/Player.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
-config/icon="res://Art/icon.svg"
+config/icon="res://Art/Item Sprites/icon.svg"
 
 [input]
 

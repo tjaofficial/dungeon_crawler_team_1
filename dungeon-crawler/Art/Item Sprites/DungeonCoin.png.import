@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://clq2wdgvup56h"
-path="res://.godot/imported/Knigh-Weapon-Walk-SW.png-12a5821137a2e5b92d50962a0cf030b0.ctex"
+uid="uid://bfghe6iyi6ivw"
+path="res://.godot/imported/DungeonCoin.png-bda3315cc67c6f4e3492d20d53266cce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art/Knigh-Weapon-Walk-SW.png"
-dest_files=["res://.godot/imported/Knigh-Weapon-Walk-SW.png-12a5821137a2e5b92d50962a0cf030b0.ctex"]
+source_file="res://Art/Item Sprites/DungeonCoin.png"
+dest_files=["res://.godot/imported/DungeonCoin.png-bda3315cc67c6f4e3492d20d53266cce.ctex"]
 
 [params]
 

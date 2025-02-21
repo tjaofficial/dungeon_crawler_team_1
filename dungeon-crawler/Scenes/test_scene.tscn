@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://dryokho12jv1w"]
+[gd_scene load_steps=7 format=3 uid="uid://dryokho12jv1w"]
 
-[ext_resource type="Texture2D" uid="uid://da4ut2an3vi8e" path="res://Art/DungeonRoomTester.png" id="1_7odrl"]
+[ext_resource type="Texture2D" uid="uid://da4ut2an3vi8e" path="res://Art/Dungeon Sprites/DungeonRoomTester.png" id="1_7odrl"]
 [ext_resource type="PackedScene" uid="uid://belg7kpcwtq1r" path="res://Scenes/Player.tscn" id="2_lxyo5"]
+[ext_resource type="PackedScene" uid="uid://dxy88ex4cry3d" path="res://Scenes/coin.tscn" id="3_1rrie"]
+[ext_resource type="PackedScene" uid="uid://8i8jagyaa4h4" path="res://Scenes/potion.tscn" id="4_pkiad"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapf"]
 size = Vector2(16, 144)
@@ -34,3 +36,21 @@ position = Vector2(0, -40)
 polygon = PackedVector2Array(-112, 0, -112, -32, 112, -32, 112, 0, 13, 0, 13, -5, -14, -5, -14, 0)
 
 [node name="Player" parent="." instance=ExtResource("2_lxyo5")]
+
+[node name="Coin" parent="." instance=ExtResource("3_1rrie")]
+position = Vector2(-75, -10)
+
+[node name="Coin2" parent="." instance=ExtResource("3_1rrie")]
+position = Vector2(-96, 18)
+
+[node name="Coin3" parent="." instance=ExtResource("3_1rrie")]
+position = Vector2(-56, 24)
+
+[node name="Potion" parent="." instance=ExtResource("4_pkiad")]
+position = Vector2(73, -20)
+
+[node name="Potion2" parent="." instance=ExtResource("4_pkiad")]
+position = Vector2(39, 4)
+
+[node name="Potion3" parent="." instance=ExtResource("4_pkiad")]
+position = Vector2(68, 24)

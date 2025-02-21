@@ -1,0 +1,53 @@
+[gd_scene load_steps=8 format=3 uid="uid://8i8jagyaa4h4"]
+
+[ext_resource type="Script" path="res://Scripts/Potion.gd" id="1_ume26"]
+[ext_resource type="Texture2D" uid="uid://jo3wh5holpa1" path="res://Art/Item Sprites/Health-Potiont.png" id="2_a60pp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5n15u"]
+atlas = ExtResource("2_a60pp")
+region = Rect2(0, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d5wcj"]
+atlas = ExtResource("2_a60pp")
+region = Rect2(16, 0, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_22523"]
+atlas = ExtResource("2_a60pp")
+region = Rect2(32, 0, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7hxd4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5n15u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d5wcj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_22523")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_4jnn4"]
+radius = 4.0
+height = 18.0
+
+[node name="Potion" type="Area2D"]
+z_index = 1
+texture_filter = 1
+script = ExtResource("1_ume26")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_7hxd4")
+autoplay = "default"
+frame_progress = 0.373596
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+shape = SubResource("CapsuleShape2D_4jnn4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
