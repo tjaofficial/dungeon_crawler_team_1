@@ -1,9 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=153 format=3 uid="uid://5owe7pryj4o7"]
+[gd_resource type="SpriteFrames" load_steps=154 format=3 uid="uid://5owe7pryj4o7"]
 
 [ext_resource type="Texture2D" uid="uid://c1h1w14q3ve7l" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-E.png" id="1_kbbxi"]
 [ext_resource type="Texture2D" uid="uid://bj7pqgculhnnd" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-N.png" id="2_ldsto"]
 [ext_resource type="Texture2D" uid="uid://ccocn0og0jshk" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-NE.png" id="3_raxg6"]
 [ext_resource type="Texture2D" uid="uid://cc8qokkrtcfd7" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-NW.png" id="4_ug4lw"]
+[ext_resource type="Texture2D" uid="uid://c4d4jwew6vubr" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-S.png" id="5_apmhc"]
 [ext_resource type="Texture2D" uid="uid://bml5ngdqlfncu" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-SE.png" id="6_3adhj"]
 [ext_resource type="Texture2D" uid="uid://c0xrp505psr1f" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-SW.png" id="7_yj6dp"]
 [ext_resource type="Texture2D" uid="uid://dmmc4enegbwi8" path="res://Art/KnightSpriteSheets/Knight-Weapon-Attack-W.png" id="8_ebu51"]
@@ -145,28 +146,36 @@ region = Rect2(216, 0, 36, 44)
 atlas = ExtResource("4_ug4lw")
 region = Rect2(252, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_de2d1"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_mgw4j"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(0, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lp1t4"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_jb0bx"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(36, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_echc5"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_yme8p"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(72, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dqcnc"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_srek4"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(108, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bopkl"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ho7t"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(144, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_ealtd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_rje8c"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(180, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_pbdbb"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_2nto6"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(216, 0, 36, 44)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_xp6i0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbdtl"]
+atlas = ExtResource("5_apmhc")
 region = Rect2(252, 0, 36, 44)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_a1m8s"]
@@ -582,7 +591,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-E",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -611,7 +620,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-N",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -640,7 +649,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-NE",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -669,36 +678,36 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-NW",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_de2d1")
+"texture": SubResource("AtlasTexture_mgw4j")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lp1t4")
+"texture": SubResource("AtlasTexture_jb0bx")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_echc5")
+"texture": SubResource("AtlasTexture_yme8p")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dqcnc")
+"texture": SubResource("AtlasTexture_srek4")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bopkl")
+"texture": SubResource("AtlasTexture_6ho7t")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ealtd")
+"texture": SubResource("AtlasTexture_rje8c")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_pbdbb")
+"texture": SubResource("AtlasTexture_2nto6")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_xp6i0")
+"texture": SubResource("AtlasTexture_dbdtl")
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-S",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -727,7 +736,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-SE",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -756,7 +765,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-SW",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -785,7 +794,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Weapon-Attack-W",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,

@@ -591,7 +591,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-E",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -620,7 +620,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-N",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -649,7 +649,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-NE",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -678,7 +678,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-NW",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -707,7 +707,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-S",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -736,7 +736,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-SE",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -765,7 +765,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-SW",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -794,7 +794,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Knight-Arms-Attack-W",
-"speed": 8.0
+"speed": 12.0
 }, {
 "frames": [{
 "duration": 1.0,
