@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://dryokho12jv1w"]
+[gd_scene load_steps=8 format=3 uid="uid://dryokho12jv1w"]
 
 [ext_resource type="Texture2D" uid="uid://da4ut2an3vi8e" path="res://Art/Dungeon Sprites/DungeonRoomTester.png" id="1_7odrl"]
 [ext_resource type="PackedScene" uid="uid://belg7kpcwtq1r" path="res://Scenes/Player.tscn" id="2_lxyo5"]
 [ext_resource type="PackedScene" uid="uid://dxy88ex4cry3d" path="res://Scenes/coin.tscn" id="3_1rrie"]
 [ext_resource type="PackedScene" uid="uid://8i8jagyaa4h4" path="res://Scenes/potion.tscn" id="4_pkiad"]
+[ext_resource type="PackedScene" uid="uid://dvij62621a5fb" path="res://Scenes/slime.tscn" id="5_ihq5x"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bmapf"]
 size = Vector2(16, 144)
@@ -18,6 +19,8 @@ texture_filter = 1
 texture = ExtResource("1_7odrl")
 
 [node name="DungeonWalls" type="StaticBody2D" parent="."]
+collision_layer = 3
+collision_mask = 3
 
 [node name="EastWall" type="CollisionShape2D" parent="DungeonWalls"]
 position = Vector2(120, 0)
@@ -54,3 +57,10 @@ position = Vector2(39, 4)
 
 [node name="Potion3" parent="." instance=ExtResource("4_pkiad")]
 position = Vector2(68, 24)
+
+[node name="Slime" parent="." node_paths=PackedStringArray("endPoint") instance=ExtResource("5_ihq5x")]
+position = Vector2(35, -27)
+endPoint = NodePath("Marker2D")
+
+[node name="Marker2D" type="Marker2D" parent="Slime"]
+position = Vector2(1, 45)

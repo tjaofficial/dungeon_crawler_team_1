@@ -8,10 +8,19 @@ extends CharacterBody2D
 @onready var weaponSprite := $Skeleton/PlayerWeapon
 @onready var armsSprite := $Skeleton/PlayerArms
 @onready var bodySprite := $Skeleton/PlayerLegs
+@onready var  swordhit := $Skeleton/AnimationPlayer
+
+
+@export var maxHealth = 3
+@onready var currentHealth: int = maxHealth
+
+@export var knockbackPower: int = 500
 
 var cardinalDirection : String # NSEW directions
 var lastDirection := Vector2.ZERO # vector2 for last player facing dir
 var inputDirectionVector  := Vector2.ZERO # vector2 for current player input dir
+
+
 
 var isTouchingDoor := false # INCOMPLETE: check if player is touching door for room trans
 
@@ -47,6 +56,18 @@ func _physics_process(delta: float) -> void:
 	if inputDirectionVector != lastDirection:
 		cardinalDirection = get_cardinal_dir_from_vector2(inputDirectionVector)
 		lastDirection = inputDirectionVector
+		
+	if Input.is_action_just_pressed("left_click"):
+		swordhit.play("Knight-Weapon-Attack-"+cardinalDirection)
+	handleCollision()
+
+	
+#Show what the player is collidnig with 
+func handleCollision():
+	for i in get_slide_collision_count():
+		var collision = get_slide_collision(i)
+		var collider = collision.get_collider()
+		print_debug(collider.name)
 
 # matches inputDirectionVector to a cardinal direction
 func get_cardinal_dir_from_vector2(direction: Vector2) -> String:
@@ -62,6 +83,8 @@ func get_cardinal_dir_from_vector2(direction: Vector2) -> String:
 		_: return cardinalDirection
 
 
+	
+		
 # passes in state name and adds cardinal direction
 # plays this animation on associated sprite
 func update_body_animations(bodyState: String):
@@ -73,10 +96,26 @@ func update_body_animations(bodyState: String):
 func update_arms_animations(armsState: String):
 	var current_frame = armsSprite.frame
 	var was_playing = armsSprite.is_playing()
-	
+		
 	armsSprite.play("Knight-Arms-"+ armsState + "-" + cardinalDirection)
 	weaponSprite.play("Knight-Weapon-"+ armsState + "-" + cardinalDirection)
 	# set frames below
 	if armsState == "Attack" && armsSprite.is_playing():
 		armsSprite.frame = current_frame
 		weaponSprite.frame = current_frame
+
+
+func _on_hurt_box_area_entered(area):
+	if area.name == "hitBox":
+		print_debug(area.get_parent().name)
+		currentHealth -= 1
+		if currentHealth <0:
+				currentHealth = maxHealth
+		print_debug(currentHealth)
+		knockback(area.get_parent().velocity)
+	pass # Replace with function body.
+ 
+func knockback(enemyVelocity: Vector2):
+	var knockbackDirection = (enemyVelocity - velocity).normalized()* knockbackPower
+	velocity = knockbackDirection
+	move_and_slide()
